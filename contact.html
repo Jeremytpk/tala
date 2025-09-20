@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contactez-nous - Shaloom Freight</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Shaloom Freight</div>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="about.html">À propos de nous</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="register-package.html">Envoyer un colis</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+                <li><a href="login.html">Connexion</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="contact-section">
+            <h2>Contactez-nous</h2>
+            <p class="intro-paragraph">
+                Pour toute question, demande de devis ou information complémentaire, n'hésitez pas à nous contacter. Notre équipe est là pour vous aider.
+            </p>
+
+            <div class="contact-details">
+                <div class="contact-card">
+                    <h3>Informations Générales</h3>
+                    <p><strong>Adresse :</strong> 123, Rue Principale, Ville, Pays</p>
+                    <p><strong>Téléphone :</strong> +1 (555) 123-4567</p>
+                    <p><strong>Email :</strong> contact@shaloomfreight.com</p>
+                </div>
+                <div class="contact-card">
+                    <h3>Heures d'ouverture</h3>
+                    <p>Lundi - Vendredi : 9h00 - 17h00</p>
+                    <p>Samedi : 10h00 - 14h00</p>
+                    <p>Dimanche : Fermé</p>
+                </div>
+            </div>
+
+            <div class="form-container">
+                <h3>Envoyez-nous un message</h3>
+                <form id="contact-form">
+                    <div class="form-group">
+                        <label for="name">Votre nom:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Votre e-mail:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Sujet:</label>
+                        <input type="text" id="subject" name="subject" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Votre message:</label>
+                        <textarea id="message" name="message" rows="6" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-button">Envoyer le message</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Shaloom Freight. Tous droits réservés.</p>
+        <p>Développé par <a href="https://jerttech.com" target="_blank" rel="noopener noreferrer">Jerttech</a></p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>

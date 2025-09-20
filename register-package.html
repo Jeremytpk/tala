@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Envoyer un colis - Shaloom Freight</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Shaloom Freight</div>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="about.html">À propos de nous</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="register-package.html" class="active">Envoyer un colis</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html">Connexion</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="form-container">
+            <h2>Enregistrer un colis</h2>
+            <form id="package-registration-form">
+                
+                <fieldset>
+                    <legend>Photos du colis (max 5)</legend>
+                    <div id="photo-upload-area">
+                        <input type="file" id="photo-input" multiple accept="image/*" disabled>
+                        <label for="photo-input" class="upload-label">
+                            Cliquez pour ajouter des photos
+                        </label>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Détails du colis</legend>
+                    <div class="form-group">
+                        <label for="weight">Poids (en Kg):</label>
+                        <input type="number" id="weight" name="weight" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="description">Description du contenu:</label>
+                        <textarea id="description" name="description" rows="4" required></textarea>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Informations sur l'expéditeur</legend>
+                    <div class="form-group">
+                        <label for="senderName">Nom complet:</label>
+                        <input type="text" id="senderName" name="senderName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="senderCountry">Pays:</label>
+                        <input type="text" id="senderCountry" name="senderCountry" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="senderPhone">Numéro de téléphone:</label>
+                        <input type="tel" id="senderPhone" name="senderPhone" required>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Informations sur le destinataire</legend>
+                    <div class="form-group">
+                        <label for="receiverName">Nom complet:</label>
+                        <input type="text" id="receiverName" name="receiverName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="receiverCity">Ville (en RDCongo):</label>
+                        <input type="text" id="receiverCity" name="receiverCity" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="receiverPhone">Numéro de téléphone:</label>
+                        <input type="tel" id="receiverPhone" name="receiverPhone" required>
+                    </div>
+                </fieldset>
+
+                <div class="form-group pickup-option">
+                    <label>
+                        <input type="checkbox" id="pickupRequest" name="pickupRequest">
+                        Je souhaite que le colis soit ramassé à mon adresse
+                    </label>
+                </div>
+
+                <div id="pickup-address-section" class="hidden">
+                    <fieldset>
+                        <legend>Adresse de ramassage</legend>
+                        <div class="form-group">
+                            <label for="pickupAddress">Adresse complète:</label>
+                            <textarea id="pickupAddress" name="pickupAddress" rows="3"></textarea>
+                        </div>
+                    </fieldset>
+                </div>
+                
+                <button type="submit" class="submit-button" disabled>Enregistrer le colis</button>
+            </form>
+            <p id="auth-message">Veuillez vous <a href="login.html">connecter</a> ou <a href="signup.html">créer un compte</a> pour enregistrer un colis.</p>
+        </section>
+    </main>
+
+    <footer>
+    <p>&copy; 2025 Shaloom Freight. Tous droits réservés.</p>
+    <p>Développé par <a href="https://jerttech.com" target="_blank" rel="noopener noreferrer">Jerttech</a></p>
+</footer>
+
+    <script src="firebase-auth.js"></script>
+    <script src="register-package.js"></script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscription - Shaloom Freight</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Shaloom Freight</div>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="about.html">À propos de nous</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="register-package.html">Envoyer un colis</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html">Connexion</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="form-container">
+            <h2>Créez un compte</h2>
+            <form id="signup-form">
+                <div class="form-group">
+                    <label for="signup-name">Nom complet:</label>
+                    <input type="text" id="signup-name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="signup-email">Adresse e-mail:</label>
+                    <input type="email" id="signup-email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="signup-password">Mot de passe:</label>
+                    <input type="password" id="signup-password" name="password" required>
+                </div>
+                <button type="submit" class="submit-button">Inscription</button>
+                <p class="form-footer">Déjà un compte ? <a href="login.html">Connectez-vous ici</a></p>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+    <p>&copy; 2025 Shaloom Freight. Tous droits réservés.</p>
+    <p>Développé par <a href="https://jerttech.com" target="_blank" rel="noopener noreferrer">Jerttech</a></p>
+</footer>
+
+    <script src="firebase-auth.js"></script>
+    <script src="signup.js"></script>
+</body>
+</html>
