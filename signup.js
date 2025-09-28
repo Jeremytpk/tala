@@ -2,7 +2,7 @@
 
 import { createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-auth.js";
 import { doc, setDoc } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-firestore.js";
-import { auth, db } from './firebase-config.js';
+import { auth, db } from './firebaseConfig.js';
 
 const signupForm = document.getElementById('signup-form');
 
