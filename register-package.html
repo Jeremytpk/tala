@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Envoyer un colis - Shaloom Freight</title>
+    <title>Envoyer un colis - Tala</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
         <nav>
-            <div class="logo">Shaloom Freight</div>
+            <div class="logo">Tala</div>
             <ul>
                 <li><a href="index.html">Accueil</a></li>
                 <li><a href="about.html">À propos de nous</a></li>
@@ -24,7 +24,9 @@
     <main>
         <section class="form-container">
             <h2>Enregistrer un colis</h2>
-            <form id="package-registration-form">
+            <p id="auth-message">Veuillez vous <a href="login.html">connecter</a> ou <a href="signup.html">créer un compte</a> pour enregistrer un colis.</p>
+            <br>
+            <form id="package-registration-form" class="hidden">
                 
                 <fieldset>
                     <legend>Photos du colis (max 5)</legend>
@@ -33,6 +35,20 @@
                         <label for="photo-input" class="upload-label">
                             Cliquez pour ajouter des photos
                         </label>
+                    </div>
+                </fieldset>
+                
+                <fieldset id="partner-selection-fieldset" class="hidden">
+                    <legend>Sélectionner un partenaire</legend>
+                    <div class="form-group">
+                        <label for="partner">Partenaire:</label>
+                        <select id="partner" name="partner">
+                            <option value="">-- Choisir un partenaire --</option>
+                            <option value="DHL Express">DHL Express</option>
+                            <option value="FedEx">FedEx</option>
+                            <option value="CMA CGM">CMA CGM</option>
+                            <option value="Air France Cargo">Air France Cargo</option>
+                        </select>
                     </div>
                 </fieldset>
 
@@ -97,18 +113,16 @@
                     </fieldset>
                 </div>
                 
-                <button type="submit" class="submit-button" disabled>Enregistrer le colis</button>
+                <button type="submit" class="submit-button">Enregistrer le colis</button>
             </form>
-            <p id="auth-message">Veuillez vous <a href="login.html">connecter</a> ou <a href="signup.html">créer un compte</a> pour enregistrer un colis.</p>
         </section>
     </main>
 
     <footer>
-    <p>&copy; 2025 Shaloom Freight. Tous droits réservés.</p>
-    <p>Développé par <a href="https://jerttech.com" target="_blank" rel="noopener noreferrer">Jerttech</a></p>
-</footer>
+        <p>&copy; 2025 Tala. Tous droits réservés.</p>
+        <p>Développé par <a href="https://jerttech.com" target="_blank" rel="noopener noreferrer">Jerttech</a></p>
+    </footer>
 
-    <script src="firebase-auth.js"></script>
     <script src="register-package.js"></script>
 </body>
 </html>

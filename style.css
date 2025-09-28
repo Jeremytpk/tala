@@ -1,8 +1,8 @@
 /* ================== General Styles ================== */
 
 :root {
-    --primary-color: #004D99; /* A deep, professional blue */
-    --secondary-color: #F7C000; /* A contrasting gold/yellow for accents */
+    --primary-color: #1A3E6C; /* Adapted from the deep blue in the logo */
+    --secondary-color: #FF8C00; /* Adapted from the orange package in the logo */
     --text-color: #333;
     --light-gray: #f4f4f4;
     --border-color: #ddd;
@@ -85,28 +85,44 @@ section {
     margin-bottom: 3rem;
 }
 
+/* --- Hero Section with Background Image --- */
 .hero {
     text-align: center;
     padding: 4rem 1rem;
     background: var(--light-gray);
     border-radius: 8px;
+    /* The following styles from your previous request are now applied here */
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('assets/kinshasa_gombe.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 60vh; /* Adjust height as needed */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff; /* Ensures text is visible on the image */
 }
 
+/* --- The original .hero h1 and .hero p are now within the new context --- */
 .hero h1 {
     font-size: 2.5rem;
     margin-bottom: 1rem;
-    color: var(--primary-color);
+    color: #fff; /* Changed to white for visibility on the dark background */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Adds a drop shadow for better legibility */
 }
 
 .hero p {
     font-size: 1.2rem;
     max-width: 600px;
     margin: 0 auto 2rem;
+    color: #fff; /* Changed to white for visibility */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
 }
 
 .cta-button {
     display: inline-block;
-    background: var(--primary-color);
+    background: var(--secondary-color); /* Changed to secondary color for better contrast */
     color: #fff;
     padding: 1rem 2rem;
     text-decoration: none;
@@ -116,7 +132,7 @@ section {
 }
 
 .cta-button:hover {
-    background: #003366; /* Darker shade of primary color */
+    background: #e07b00; /* Darker shade of secondary color, adapted from new orange */
 }
 
 .services-preview {
@@ -221,7 +237,7 @@ form legend {
 }
 
 .submit-button:hover {
-    background: #003366;
+    background: #143152; /* Darker shade of new primary color */
 }
 
 .submit-button:disabled {
@@ -279,6 +295,10 @@ form legend {
     gap: 0.5rem;
     cursor: pointer;
 }
+#auth-message {
+        text-align: center;
+        font-size: 1rem;
+    }
 
 /* ================== Footer ================== */
 
@@ -322,5 +342,20 @@ footer a:hover {
 
     .form-container {
         padding: 1rem;
+    }
+    .logo-image {
+        height: 20px;
+        width: auto;
+        border-radius: 100px;
+    }
+    nav .logo img {
+    height: 40px; /* Adjust this value as needed to fit your design */
+    width: auto;
+    vertical-align: middle;
+    border-radius: 30px;
+    }
+
+    nav .logo a {
+    text-decoration: none;
     }
 }
